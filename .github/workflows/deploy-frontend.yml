@@ -30,14 +30,12 @@ jobs:
         run: npm run build
 
       - name: Configure Pages
-        uses: actions/configure-pages@4
-        with:
-          static_site_generator: null
+        uses: actions/configure-pages@v4
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@3
+        uses: actions/upload-pages-artifact@v2
         with:
           path: ./frontend/dist
 
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@4
+        uses: actions/deploy-pages@v4
